@@ -29,7 +29,7 @@ public class RegisterServ extends HttpServlet{
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbcexample","root","saruu");
 			//query.....
-			String s="insert into jdb32 values (Name,password,Email) values(?,?,?)";
+			String s="insert into jdb32(Name,password,Email) values(?,?,?)";
 			 PreparedStatement pst =con.prepareStatement(s);
 			 pst.setString(1,Name);
 			 pst.setString(2,password);
